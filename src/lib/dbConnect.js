@@ -2,6 +2,9 @@ import { MongoClient } from "mongodb";
 
 const client = new MongoClient(process.env.URI);
 const dbName = process.env.DB_NAME;
+export const collections = {
+    USER: "users"
+};
 
 export const dbConnect = (cName) => {
     // const database = client.db(dbName);

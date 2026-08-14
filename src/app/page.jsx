@@ -4,8 +4,8 @@ import { IoShieldCheckmarkSharp } from "react-icons/io5";
 import { SiMongodb } from "react-icons/si";
 import UseCard from "@/components/UseCard";
 import { getServerSession } from "next-auth";
-import { authOptions } from "./api/auth/[...nextauth]/route";
 import AuthButtons from "@/components/AuthButtons";
+import { authOptions } from "@/lib/authOpts";
 
 
 export default async function Home() {
