@@ -4,6 +4,9 @@ import { dbConnect } from "@/lib/dbConnect";
 import bcrypt from 'bcryptjs';
 
 export const postUser = async (payload) => {
+
+    //validation check required
+
     //check existing user 
     const isExist = await dbConnect("users").findOne({ email: payload.email });
     if (isExist) {
@@ -29,6 +32,11 @@ export const postUser = async (payload) => {
         return ({
             success: true,
             message: `user created with ${result.insertedId.toString()}`
+        })
+    } else {
+        return ({
+            success: false,
+            message: "Something went wrong. Please try again!"
         })
     };
 

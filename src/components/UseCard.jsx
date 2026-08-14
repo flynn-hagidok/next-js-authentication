@@ -6,7 +6,7 @@ const UseCard = () => {
 
     // const { data: session } = useSession();
     const session = useSession();
-    console.log(session);
+    // console.log(session);
 
     return (
         <div>
